@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Result</h2>
+<div>
+    @using (Html.BeginForm())
+    {
+        <b>DDS</b>@Html.TextBox("ddsTxt")<br />
+        <b>WDD</b>@Html.TextBox("wddTxt")<br />
+        <b>PF</b>@Html.TextBox("pfTxt")<br />
+        <b>OOP</b>@Html.TextBox("oopTxt")<br />
+        <b>WE</b>@Html.TextBox("weTxt")<br />
+        <input type="submit" value="Percentage" /><br />
+    }
+</div>
+<div>
+    <p>Percentage : </p>
+    @if (ViewBag.percent != null)
+    {
+        <p>@ViewBag.percent</p>
+    }
+    <p>Grade : </p>
+    @if(ViewBag.grade != null)
+            {
+                <p>@ViewBag.grade</p>
+            }
+</div>
+
